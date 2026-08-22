@@ -90,7 +90,7 @@ def paipan(year, month, day, hour, gender, minute=0):
     参数：
       year/month/day/hour/minute  阳历年月日时分（hour 0-23，minute 0-59）
       gender  性别：1=男，0=女
-    返回：结构化盘面字典，含四柱、五行、纳音、十神、藏干、空亡、十二长生、天月二德、大运。
+    返回：结构化盘面字典，含性别、四柱、五行、纳音、十神、藏干、空亡、十二长生、天月二德、大运。
     """
     solar = Solar.fromYmdHms(year, month, day, hour, minute, 0)
     lunar = solar.getLunar()
@@ -155,6 +155,7 @@ def paipan(year, month, day, hour, gender, minute=0):
     }
 
     return {
+        "性别": "男" if gender == 1 else "女",  # 输入性别随盘面输出（1=男，0=女），供下游/HTML 流转
         "四柱": pillars,
         "五行": wuxing,
         "纳音": nayin,

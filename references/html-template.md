@@ -45,7 +45,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">跃渊 v{{版本号}} · {{坤造/乾造}}</div>
+  <div class="eyebrow">跃渊 v{{版本号}} · {{性别：男填"乾造"／女填"坤造"，二选一，禁止并列}}</div>
   <h1>{{姓名}}</h1>
   <div class="tag-row">
     <span class="badge">不确定度：{{高/中/低}}</span>
